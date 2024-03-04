@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+#main {
+    margin: 50px auto;
+    width: 50%;
+    background-color: white;
+}
+
+#header {
+    padding: 20px;
+}
+
+#box {
+    padding: 10px;
+}
+
+#ename,
+#jrole,
+#edept,
+#esal,
+#eyear,
+#email {
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+}
+
+#result {
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+}
+
+th {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: green;
+    justify-content: space-between;
+}
+tr{
+    background-color: wheat;
+}
