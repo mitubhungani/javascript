@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.data {
+    width: 100%;
+}
+
+.main-body {
+    width: 95%;
+    margin: 100px auto;
+}
+
+.main-card {
+    width: 100%;
+    border-radius: 11px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: red;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+}
+
+hr {
+    margin: 10px auto;
+}
+
+.count {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.card {
+    width: 24%;
+}
