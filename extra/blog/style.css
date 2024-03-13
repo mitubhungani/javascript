@@ -14,7 +14,6 @@ body {
 }
 
 .main {
-    width: 100%;
     width: 60%;
     margin: auto;
 }
@@ -66,6 +65,10 @@ input {
     border-radius: 10px;
     color: white;
     background-color: black;
+}
+
+textarea {
+    width: 500px;
 }
 
 #con-i {
@@ -128,7 +131,153 @@ hr {
     width: 40%;
     background-color: black;
     color: white;
+    text-align: center;
+    height: 30px;
+    border-radius: 20px;
     border: none;
     margin: 5px;
     cursor: pointer;
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+    .main {
+        width: 90%;
+    }
+
+    input {
+        width: 400px;
+        height: 30px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .title,
+    .img,
+    .con {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    #box-1 {
+        width: 100%;
+        padding: 1px;
+        margin: 0px auto;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    #inner-box {
+        width: 30%;
+        text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #title {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+
+@media (min-width:481px) and (max-width: 768px) {
+    .main {
+        width: 90%;
+    }
+
+    input {
+        width: 400px;
+        height: 30px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .title,
+    .img,
+    .con {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    #box-1 {
+        width: 100%;
+        padding: 1px;
+        margin: 0px auto;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    #inner-box {
+        width: 47%;
+        text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #title {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width:320px) and (max-width: 480px) {
+    .main {
+        width: 90%;
+    }
+
+    input {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+        outline: none;
+    }
+
+    .title,
+    .img,
+    .con {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+    #box-1 {
+        width: 100%;
+        padding: 1px;
+        margin: 0px 0px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    #inner-box {
+        width: 100%;
+        text-align: center;
+        border-radius: 20px;
+        background-color: white;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #title {
+        width: 90%;
+        margin: 10px auto;
+    }
 }
