@@ -1,4 +1,4 @@
-let posts = JSON.parse(localStorage.getItem('index'))||[] ;
+let posts = JSON.parse(localStorage.getItem('index')) || [];
 uimeke();
 const intaker = (e) => {
     e.preventDefault()
@@ -14,7 +14,7 @@ const intaker = (e) => {
 
     posts.push(post);
     console.log(posts);
-    
+
     localStorage.setItem("index", JSON.stringify(posts))
     uimeke()
 }
