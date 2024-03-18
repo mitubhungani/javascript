@@ -1,5 +1,5 @@
-let posts = []
-
+let posts = JSON.parse(localStorage.getItem('index'))||[] ;
+uimeke();
 const intaker = (e) => {
     e.preventDefault()
     let title = document.getElementById('title-i').value;
@@ -12,8 +12,10 @@ const intaker = (e) => {
         desc: desc
     }
 
-    posts.push(post)
+    posts.push(post);
     console.log(posts);
+    
+    localStorage.setItem("index", JSON.stringify(posts))
     uimeke()
 }
 
@@ -57,6 +59,7 @@ function uimeke() {
         del.addEventListener('click', () => {
             posts.splice(i, 1);
 
+            localStorage.setItem("index", JSON.stringify(posts))
             uimeke();
         })
 
