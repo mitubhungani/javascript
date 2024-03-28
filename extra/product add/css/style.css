@@ -1,0 +1,39 @@
+#main {
+    width: 90%;
+    margin: 3% auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#box {
+    width: 22%;
+    /* background-color: red; */
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#title {
+    width: 100%;
+    /* background-color: yellow; */
+    margin: 10px 0;
+}
+
+#img {
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.5s;
+    width: 80%;
+}
+
+#img:hover {
+    transform: scale(1.05);
+}
+
+#price {
+    margin: 10px 0;
+}

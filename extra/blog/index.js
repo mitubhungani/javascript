@@ -5,7 +5,7 @@ const intaker = (e) => {
     let title = document.getElementById('title-i').value;
     let img = document.getElementById('img-i').value;
     let desc = document.getElementById('con-i').value;
-
+    
     let post = {
         title: title,
         img: img,
