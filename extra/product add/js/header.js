@@ -5,5 +5,5 @@ document.querySelector(".profile").addEventListener("click", () => {
 })
 
 document.querySelector(".profile-p").addEventListener("click", () => {
-    window.location.href = "/pages/login.html"
+    window.location.href = "../pages/login.html"
 })
