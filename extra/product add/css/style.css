@@ -1,3 +1,4 @@
+
 #main {
     width: 90%;
     margin: 3% auto;
@@ -7,20 +8,41 @@
 
 #box {
     width: 22%;
-    /* background-color: red; */
     text-align: center;
     color: white;
     border-radius: 10px;
     box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
     margin: 20px;
+}
+
+#head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+#title {
+    width: 80%;
+    text-align: left;
+    padding: 0px 10px;
+    height: 100%;
+}
+
+#cart{
+    width: 20%;
+    height: 100%;
+}
+
+#cart>.bi{
+    font-size: 25px;
+    color: white;
     cursor: pointer;
 }
 
-#title {
-    width: 100%;
-    /* background-color: yellow; */
-    margin: 10px 0;
+#cart>.bi:hover{
+    color: red;
 }
+
 
 #img {
     text-align: center;
@@ -36,4 +58,39 @@
 
 #price {
     margin: 10px 0;
+}
+#price:hover{
+    background-color: black;
+}
+
+
+#menu{
+    width: 100%;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-evenly;
+}
+#category{
+    width: 40%;
+    border: 2px solid red;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#category:hover{
+    background-color: red;
+}
+
+#buybtn{
+    background-color: black;
+    border:  solid red;
+    border-radius: 20px;
+    color: white;
+    width: 40%;
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#buybtn:hover{
+    background-color: red;
 }

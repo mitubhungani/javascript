@@ -7,6 +7,7 @@ const data = (e) => {
     let hi = {
         title: document.getElementById("title").value,
         img: document.getElementById("img").value,
+        category:document.getElementById("category").value,
         price: document.getElementById("price").value
     }
 
