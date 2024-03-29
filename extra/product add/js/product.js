@@ -28,7 +28,7 @@ const show = () => {
         menu.setAttribute( "id","menu" )
         
         let category = document.createElement("span")
-        category.innerHTML=product.category
+        category.innerHTML=pro.category
         category.setAttribute("id","category")
 
         let buy= document.createElement("button")

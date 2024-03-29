@@ -84,7 +84,7 @@
 
 #buybtn{
     background-color: black;
-    border:  solid red;
+    border: 2px solid red;
     border-radius: 20px;
     color: white;
     width: 40%;
