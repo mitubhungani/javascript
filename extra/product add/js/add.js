@@ -14,7 +14,7 @@ const data = (e) => {
     console.log(hi);
     product.push(hi)
     localStorage.setItem("products", JSON.stringify(product))
-    window.location.href = "/pages/index.html"
+    window.location.href = "../pages/index.html"
 }
 
 document.querySelector(".add-product-form").addEventListener("submit", data)

@@ -10,7 +10,7 @@ const Signup = (e) => {
     }
     user.push(data)
     localStorage.setItem("users", JSON.stringify(user))
-    window.location.href = "./index.html"
+    window.location.href = "../index.html"
 }
 
 document.querySelector(".Signup").addEventListener("submit", Signup)
