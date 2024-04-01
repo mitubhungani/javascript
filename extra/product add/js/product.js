@@ -1,7 +1,8 @@
 let product = JSON.parse(localStorage.getItem("products")) || []
 
-const show = () => {
-    product.map((pro) => {
+const show = (data) => {
+    document.getElementById("main").innerHTML=""
+    data.map((pro) => {
         let box = document.createElement("div")
         box.setAttribute("id", "box")
 
@@ -43,4 +44,18 @@ const show = () => {
         document.getElementById("main").append(box)
     })
 }
-show()
+show(product)
+
+
+const search=(val)=>{
+    let tempa=product.filter((ele)=>ele.title.includes(val))
+    console.log(tempa);
+    show(tempa)
+}
+const hebdelsearch=(e)=>{
+    e.preventDefault();
+    let temp= document.querySelector(".input-box").value
+    console.log(temp);
+    search(temp);
+}
+document.querySelector('.form-main').addEventListener("submit",hebdelsearch)

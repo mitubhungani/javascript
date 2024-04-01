@@ -17,13 +17,6 @@ const log = (e) => {
         sessionStorage.setItem("islogin", true)
     }
 
-    let islogin = sessionStorage.getItem("islogin")
-    if (islogin) {
-        window.location.href = "../pages/index.html"
-        document.getElementById("logout").innerHTML="logout"
-    }
-    else{
-    }
 
 }
 

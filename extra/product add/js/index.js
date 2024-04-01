@@ -1,7 +1,8 @@
 let product = JSON.parse(localStorage.getItem("products")) || []
 
-const show = () => {
-    product.map((pro) => {
+const show = (data) => {
+    document.getElementById("main").innerHTML=""
+    data.map((pro) => {
         let box = document.createElement("div")
         box.setAttribute("id", "box")
 
@@ -21,7 +22,7 @@ const show = () => {
         img.setAttribute("id", "img")
 
         let price = document.createElement("p")
-        price.innerHTML = pro.price
+        price.innerHTML = `Rs: ${pro.price}`
         price.setAttribute("id", "price")
 
         let menu=document.createElement( "div" )
@@ -43,43 +44,18 @@ const show = () => {
         document.getElementById("main").append(box)
     })
 }
-show()
+show(product)
 
-// let product = JSON.parse(localStorage.getItem("products")) || []
 
-// const show = () => {
-//     product.map((pro) => {
-//         let box = document.createElement("div")
-//         box.setAttribute("id", "box")
-
-//         let title = document.createElement("h2")
-//         title.innerHTML = pro.title
-//         title.setAttribute("id", "title")
-
-//         let img = document.createElement("img")
-//         img.src = pro.img
-//         img.setAttribute("id", "img")
-
-//         let price = document.createElement("p")
-//         price.innerHTML = pro.price
-//         price.setAttribute("id", "price")
-
-//         // let menu=document.getElementById('menu')
-//         // menu.innerHTML=pro.menu
-//         // menu.setAttribute("id","menu")
-
-//         // let category = document.createElement("span")
-//         // category.innerHTML=pro.category
-//         // category.setAttribute("id","category")
-
-//         // let buy= document.createElement("button")
-//         // buy.innerHTML=pro.btn
-//         // buy.setAttribute("id","buybtn")
-
-//         menu.append(category)
-
-//         box.append(title, img, price)
-//         document.getElementById("main").append(box)
-//     })
-// }
-// show()
+const search=(val)=>{
+    let tempa=product.filter((ele)=>ele.title.includes(val))
+    console.log(tempa);
+    show(tempa)
+}
+const hebdelsearch=(e)=>{
+    e.preventDefault();
+    let temp= document.querySelector(".input-box").value
+    console.log(temp);
+    search(temp);
+}
+document.querySelector('.form-main').addEventListener("submit",hebdelsearch)

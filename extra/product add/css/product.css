@@ -13,6 +13,7 @@
     border-radius: 10px;
     box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
     margin: 20px;
+    position: relative;
 }
 
 #head{
@@ -50,6 +51,8 @@
     box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
     transition: transform 0.5s;
     width: 80%;
+    object-fit: contain;
+    height: 200px;
 }
 
 #img:hover {
@@ -57,7 +60,7 @@
 }
 
 #price {
-    margin: 10px 0;
+    margin: 20px 0 50px 0;
 }
 #price:hover{
     background-color: black;
@@ -68,6 +71,8 @@
     width: 100%;
     display: flex;
     margin: 10px 0px;
+    position: absolute;
+    bottom: 0;
     justify-content: space-evenly;
 }
 #category{
@@ -84,7 +89,7 @@
 
 #buybtn{
     background-color: black;
-    border:  solid red;
+    border: 2px solid red;
     border-radius: 20px;
     color: white;
     width: 40%;
