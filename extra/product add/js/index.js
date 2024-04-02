@@ -1,6 +1,5 @@
 let product = JSON.parse(localStorage.getItem("products")) || []
-let cart = JSON.parse(localStorage.getItem("carts")) || []
-console.log(cart);
+let localcart = JSON.parse(localStorage.getItem("carts")) || []
 const show = (data) => {
     document.getElementById("main").innerHTML=""
     data.map((pro,i) => {
@@ -17,7 +16,14 @@ const show = (data) => {
         let cart= document.createElement("btn")
         cart.innerHTML=`<i class="bi bi-basket"></i>`
         cart.setAttribute("id","cart")
-       
+        
+        cart.addEventListener("click", ()=>{
+            let cartqty={...pro,qty:1}
+            console.log(pro);
+            localcart.push(cartqty)
+            localStorage.setItem("carts",JSON.stringify(localcart))
+        });
+        
         let img = document.createElement("img")
         img.src = pro.img
         img.setAttribute("id", "img")
@@ -43,12 +49,6 @@ const show = (data) => {
         
         box.append(head, img, price,menu)
         document.getElementById("main").append(box)
-        cart.addEventListener("click", ()=>{
-            console.log(pro);
-            cart.push(pro)
-            console.log(cart);
-            localStorage.setItem("carts",JSON.stringify(cart))
-        });
     })
 }
 

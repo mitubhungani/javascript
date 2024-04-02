@@ -63,12 +63,12 @@ body {
   cursor: pointer;
 }
 
-.icon{
+.icon {
   display: flex;
   justify-content: end;
 }
 
-.input-box{
+.input-box {
   width: 60%;
 }
 
@@ -117,20 +117,29 @@ hr {
 p {
   text-align: center;
   margin: 0px;
-  padding: 7px;
+  padding: 5px;
   color: white;
 }
 
 p:hover {
   background-color: red;
 }
-a{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-
+.carte {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  display: block;
+  padding: 5px;
+  height: 100%;
+}
+.carte:hover{
+  background-color: red;
 }
 
+.carte>p{
+  background-color: transparent;
+  padding: 0px;
+}
 
 /* ----------------------------------------------- */
 
@@ -142,68 +151,66 @@ a{
 
 /* ------h-end------------------------------- */
 
-
-@media (max-width: 991px){
-  .nav{
+@media (max-width: 991px) {
+  .nav {
     border-radius: 10px;
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     color: white;
   }
-  .navbar-nav{
-    margin:auto;
+  .navbar-nav {
+    margin: auto;
   }
-  .center{
+  .center {
     display: none;
   }
-  .form-main{
+  .form-main {
     width: 80%;
     text-align: center;
     justify-content: center;
     margin: auto;
   }
-  .input-box{
+  .input-box {
     width: 70%;
   }
-  .nav-item{
+  .nav-item {
     width: 20%;
     position: relative;
   }
-  .profile-menu{
-    top:60px;
+  .profile-menu {
+    top: 60px;
     position: absolute;
   }
 }
 
-
-@media (max-width: 768px){
-  .nav{
+@media (max-width: 768px) {
+  .nav {
     border-radius: 10px;
   }
-  .navbar-toggler-icon{
+  .navbar-toggler-icon {
     color: white;
   }
-  .navbar-nav{
-    margin:auto;
+  .navbar-nav {
+    margin: auto;
   }
-  .center{
+  .center {
     display: none;
   }
-  .form-main{
+  .form-main {
     width: 80%;
     text-align: center;
     justify-content: center;
     margin: auto;
   }
-  .input-box{
+  .input-box {
     width: 70%;
   }
-  .nav-item{
+  .nav-item {
     width: 20%;
     position: relative;
   }
-  .profile-menu{
-    top:60px;
+  .profile-menu {
+    top: 60px;
     position: absolute;
   }
 }
