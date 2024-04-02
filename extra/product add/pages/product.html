@@ -12,15 +12,15 @@
     <!-- icon bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
     <title>Product</title>
 </head>
 
 <body>
     <div class="mm">
-        <nav class="nav navbar navbar-expand-lg mt-3 rounded-pill">
-            <div class="container-fluid">
+        <nav class="nav navbar navbar-expand-lg mt-3">
+            <div class="container-fluid ">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -48,11 +48,12 @@
                         <img class="image" src="../image/logo.png" alt="">
                     </div>
 
-                    <form class="form-main d-flex px-1 col-5" role="search">
-                        <input class="input-box form-control me-2" type="search" placeholder="Search"
-                            aria-label="Search">
-                            <input class="btn text-white"
-                            type="submit">
+                    <form class="form-main d-flex px-1 col-5">
+                        <div class="icon">
+                            <input class="input-box form-control me-2" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <input class="btn text-white" type="submit">
+                        </div>
 
                         <li class="nav-item px-1">
 
@@ -65,9 +66,8 @@
                                 <hr>
                                 <p class="profile-p">Login/Sign-up</p>
                                 <hr>
-                                <p class="profile-p">Cart</p>
+                                <a class="carte" href="../pages/cart.html"><p class="profile-p"></p>Cart</p></a>
                             </div>
-
                         </li>
                     </form>
                 </div>
@@ -82,7 +82,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script src="../js/product.js"></script>
+<script src="../js/index.js"></script>
 <script src="../js/header.js"></script>
 
 </html>

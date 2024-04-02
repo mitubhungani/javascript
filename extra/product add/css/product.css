@@ -101,12 +101,14 @@
 }
 /* ----------media--------------------- */
 
+/* ----------media--------------------- */
+
 @media (max-width: 1481px) {
     #main{
       justify-content: space-evenly;
     }
     #box{
-      width: 30%;
+      width: 21%;
     }
   }
   
