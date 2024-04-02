@@ -132,11 +132,11 @@ p:hover {
   padding: 5px;
   height: 100%;
 }
-.carte:hover{
+.carte:hover {
   background-color: red;
 }
 
-.carte>p{
+.carte > p {
   background-color: transparent;
   padding: 0px;
 }

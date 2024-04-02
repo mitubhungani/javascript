@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 
 * {
@@ -53,38 +53,49 @@ body {
 
 .btn:hover{
     border: 2px solid red;
-}
+} */
 
 .input-box {
-    width: 40%;
+  width: 40%;
 }
 
 .image {
-    width: 70px;
-    cursor: pointer;
+  width: 70px;
+  cursor: pointer;
 }
 
 .nav-item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .form-select {
-    margin: 7% auto;
-    padding: 16px 12px;
+  padding: 16px 12px;
 }
 
 .add-product-form {
-    width: 25%;
-    margin: 7% auto;
+  width: 50%;
+  margin: 7% auto;
+  z-index: 0;
+}
+
+.form-floating {
+  margin: 7% auto;
 }
 
 .nav-link {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
+/* ----------media------------- */
 
-
-
+@media (max-width: 735px) {
+  .add-product-form {
+    width: 80%;
+  }
+  .input-box {
+    width: 100%;
+  }
+}
 
 /* 
 .main {
