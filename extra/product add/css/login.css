@@ -1,152 +1,149 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    width: 100%;
+  background-color: black;
+  width: 100%;
 }
 
 .mm {
-    width: 100%;
-    background-color: black;
-    position: sticky;
-    top: 0;
+  width: 100%;
+  background-color: black;
+  position: sticky;
+  top: 0;
 }
 
 .nav {
-    width: 90%;
-    margin: auto;
-    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
-    top: 16px;
-    background-color: black;
-    border: 2px solid red;
+  width: 90%;
+  margin: auto;
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+  top: 16px;
+  background-color: black;
+  border: 2px solid red;
 }
 
 .container-fluid {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .navbar-nav {
-    align-items: center;
+  align-items: center;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .form-main {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .input-box {
-    width: 40%;
+  width: 40%;
 }
 
 .image {
-    width: 70px;
-    cursor: pointer;
+  width: 70px;
+  cursor: pointer;
 }
 
 .nav-item {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .nav-link {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .btn {
-    margin: 0px 4px;
-    border: 2px solid red;
-    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+  margin: 0px 4px;
+  border: 2px solid red;
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.btn:hover{
-    border: 2px solid red;
+.btn:hover {
+  border: 2px solid red;
 }
-
 
 /* --------------------------------------------- */
 
 .login {
-    width: 25%;
-    margin: 7% auto;
+  width: 25%;
+  margin: 7% auto;
 }
 
 .form-main {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
-
-.hr-pro{
-    width: 100%;
-    margin: 10px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hr-pro {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-hr{
-    width: 45%;
-    color: red;
-    height: 3px;
+hr {
+  width: 100%;
+  color: red;
 }
 
-.or{
-    color: rgb(119, 114, 114);
+.or {
+  color: rgb(119, 114, 114);
 }
 
-.sign-upapps{
-    width: 100%;
-    justify-content: space-evenly;
+.sign-upapps {
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .signin {
-    width: 100%;
-    margin: 10px auto;
-    max-width: 320px;
-    display: flex;
-    padding: 0.5rem 1.4rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    vertical-align: middle;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-    border: 2px solid red;
-    gap: 0.75rem;
-    color: #c4d2dc;
-    background-color:transparent;
-    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer;
-    transition: all 0.25s cubic-bezier(0, 0.87, 0.12, 1);
+  width: 100%;
+  margin: 10px auto;
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 2px solid red;
+  gap: 0.75rem;
+  color: #c4d2dc;
+  background-color: transparent;
+  box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0.87, 0.12, 1);
 }
-  
+
 .signin:hover {
-    transform: scale(1.025);
+  transform: scale(1.025);
 }
-  
+
 .signin:active {
-    transform: scale(0.975);
+  transform: scale(0.975);
 }
 
 button svg {
-    height: 24px;
-    width: auto;
+  height: 24px;
+  width: auto;
 }
 
-.line:hover{
-    background-color: transparent;
+.line:hover {
+  background-color: transparent;
 }
 
-.Signup{
-    color: red;
-    text-decoration:none
+.Signup {
+  color: red;
+  text-decoration: none;
 }

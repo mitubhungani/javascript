@@ -24,6 +24,7 @@ body {
   margin: auto;
   box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
   top: 16px;
+  border-radius: 100px;
   background-color: black;
   border: 2px solid red;
 }
@@ -60,6 +61,15 @@ body {
 
 .nav-item {
   cursor: pointer;
+}
+
+.icon{
+  display: flex;
+  justify-content: end;
+}
+
+.input-box{
+  width: 60%;
 }
 
 .nav-link {
@@ -131,3 +141,69 @@ a{
 }
 
 /* ------h-end------------------------------- */
+
+
+@media (max-width: 991px){
+  .nav{
+    border-radius: 10px;
+  }
+  .navbar-toggler-icon{
+    color: white;
+  }
+  .navbar-nav{
+    margin:auto;
+  }
+  .center{
+    display: none;
+  }
+  .form-main{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .input-box{
+    width: 70%;
+  }
+  .nav-item{
+    width: 20%;
+    position: relative;
+  }
+  .profile-menu{
+    top:60px;
+    position: absolute;
+  }
+}
+
+
+@media (max-width: 768px){
+  .nav{
+    border-radius: 10px;
+  }
+  .navbar-toggler-icon{
+    color: white;
+  }
+  .navbar-nav{
+    margin:auto;
+  }
+  .center{
+    display: none;
+  }
+  .form-main{
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .input-box{
+    width: 70%;
+  }
+  .nav-item{
+    width: 20%;
+    position: relative;
+  }
+  .profile-menu{
+    top:60px;
+    position: absolute;
+  }
+}
