@@ -99,3 +99,67 @@
 #buybtn:hover {
   background-color: red;
 }
+
+
+@media (max-width: 1481px) {
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 30%;
+  }
+}
+
+@media(max-width:1332px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 29%;
+  }
+}
+
+@media(max-width:1111px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 29%;
+  }
+}
+
+@media(max-width:1024px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 28%;
+  }
+}
+
+@media(max-width:832px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 27%;
+  }
+}
+
+@media(max-width:702px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 43%;
+  }
+}
+
+@media(max-width:635px){
+  #main{
+    justify-content: space-evenly;
+  }
+  #box{
+    width: 100%;
+  }
+}
