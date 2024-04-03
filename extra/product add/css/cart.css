@@ -135,25 +135,31 @@
   display: flex;
   height: 100%;
   align-items: center;
+  margin: auto;
 }
 
 #minus{
    font-size: 5px;
-    margin-left: 5px;
+    /* margin-left: 5px; */
     border: 2px solid red;
     border-right: none;
     cursor: pointer;
 }
 #qty {
   width: 30%;
-  height: 49px;
+  height: 48px;
   background-color: transparent;
   border-top: 2px solid red;
   border-bottom: 2px solid red;
   border-left: none;
   border-right: none;
   color: red;
+  text-align: center;
 }
+
+/* input{
+  text-align: center;
+} */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
