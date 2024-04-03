@@ -46,10 +46,6 @@ const show = (data) => {
     category.innerHTML = pro.category;
     category.setAttribute("id", "category");
 
-    let buy = document.createElement("button");
-    buy.innerHTML = "Buy";
-    buy.setAttribute("id", "buybtn");
-
     let midcenter=document.createElement("div")
     midcenter.setAttribute("id","midcenter")
 
@@ -75,7 +71,7 @@ const show = (data) => {
 
     head.append(img);
 
-    center.append(title,price,category,buy);
+    center.append(title,price,category);
     midcenter.append(minus,qty,plus)
     left.append(del)
     box.append(head,center,midcenter,left);
