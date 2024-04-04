@@ -62,6 +62,13 @@ const show = (data) => {
     plus.innerHTML=`<i class="bi bi-plus"></i>`
     plus.setAttribute("id","plus")
 
+    let total=document.createElement("div")
+    total.setAttribute("id","total")
+
+    let totalprice=document.createElement("P")
+    totalprice.innerHTML=`Rs: ${pro.price}`
+    totalprice.setAttribute("id","totalprice")
+
     let left=document.createElement('div')
     left.setAttribute("id","left");
 
@@ -73,8 +80,9 @@ const show = (data) => {
 
     center.append(title,price,category);
     midcenter.append(minus,qty,plus)
+    total.append(totalprice)
     left.append(del)
-    box.append(head,center,midcenter,left);
+    box.append(head,center,midcenter,total,left);
 
     // menu.append(category, buy);
 
