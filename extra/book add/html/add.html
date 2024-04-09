@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/add.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Book Mart</label>
+      <ul>
+        <li><a class="active" href="../html/home.html">Home</a></li>
+        <li><a href="#">Add</a></li>
+        <li><a href="../html/cart.html">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="main">
+        <form class="for">
+          <label for="fname">Title</label>
+          <input type="text" id="title" name="firstname" placeholder="Title">
+      
+          <label for="lname">Image</label>
+          <input type="url" id="image" name="lastname" placeholder="Enter URL">
+      
+          <label for="country">Price</label>
+          <input type="number" id="price" name="lastname" placeholder="Enter price ">
+          
+          <input class="submit" type="submit" value="Submit">
+        </form>
+      </div>
+      <script src="../js/add.js"></script>
+  </body>
+</html>
