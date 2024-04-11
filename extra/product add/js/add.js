@@ -1,5 +1,4 @@
-let product = JSON.parse(localStorage.getItem("products")) || [];
-
+let product = JSON.parse(localStorage.getItem("products")) || []; 
 const data = (e) => {
   e.preventDefault();
   let data = document.getElementById("title").value;

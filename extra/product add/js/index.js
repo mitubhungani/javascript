@@ -4,7 +4,7 @@ const show = (data) => {
     document.getElementById("main").innerHTML=""
     data.map((pro,i) => {
         let box = document.createElement("div")
-        box.setAttribute("id", "box")
+        box.setAttribute("id", "box")   
 
         let head = document.createElement("div")
         head.setAttribute("id", "head") 
