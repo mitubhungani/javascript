@@ -167,6 +167,12 @@ i {
   height: 25px;
   text-align: center;
   margin: 0px 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.hidden{
+  display: none;
 }
 
 /* -------------second-bar-end------------------- */
