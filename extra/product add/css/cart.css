@@ -102,7 +102,7 @@
    */
 .bro{
   width: 90%;
-  background-color: blue;
+  /* background-color: blue; */
   overflow: hidden;
   margin: 3% auto;
   /* border: 2px solid red; */
@@ -122,7 +122,7 @@
   box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
   margin: 20px auto;
   display: flex;
-  background-color: yellow;
+  /* background-color: yellow; */
   overflow: hidden;
 }
 
@@ -138,7 +138,7 @@
 }
 
 #center {
-  width: 40%;
+  width: 30%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -180,12 +180,13 @@
   height: 100%;
   align-items: center;
   margin: auto;
+  border: 2px solid red;
 }
 
 #minus{
    font-size: 5px;
     /* margin-left: 5px; */
-    border: 2px solid red;
+    
     border-right: none;
     cursor: pointer;
 }
@@ -193,10 +194,7 @@
   width: 30%;
   height: 48px;
   background-color: transparent;
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  border-left: none;
-  border-right: none;
+  border: none;
   color: red;
   text-align: center;
 }
@@ -215,23 +213,46 @@ input::-webkit-inner-spin-button {
     outline: none;
 }
 #plus{
-    border: 2px solid red;
     border-left: none;
     cursor: pointer;
 }
 
-#left {
+#total{
   width: 15%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#totalprice{
+  text-align: center;
+  font-size: 20px;
+}
+
+#totalprice:hover{
+  background-color: transparent;
+}
+
+#left {
+  width: 10%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
 }
 
 #del {
   color: white;
+  cursor: pointer;
 }
 
 
 .side{
   width: 40%;
-  background-color: green;
+  z-index: 0;
+  /* background-color: green; */
 }
 
 .promo{

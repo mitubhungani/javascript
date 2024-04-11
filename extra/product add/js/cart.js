@@ -13,7 +13,6 @@ const show = (data) => {
     img.src = pro.img;
     img.setAttribute("id", "img");
 
-    
     // let cart= document.createElement("btn")
     // cart.innerHTML=`<i class="bi bi-basket"></i>`
     // cart.setAttribute("id","cart")
@@ -28,12 +27,9 @@ const show = (data) => {
     let center = document.createElement("div");
     center.setAttribute("id", "center");
 
-
-
     let title = document.createElement("h2");
     title.innerHTML = pro.title;
     title.setAttribute("id", "title");
-
 
     let price = document.createElement("p");
     price.innerHTML = `Rs: ${pro.price}`;
@@ -46,35 +42,43 @@ const show = (data) => {
     category.innerHTML = pro.category;
     category.setAttribute("id", "category");
 
-    let midcenter=document.createElement("div")
-    midcenter.setAttribute("id","midcenter")
+    let midcenter = document.createElement("div");
+    midcenter.setAttribute("id", "midcenter");
 
     let minus = document.createElement("btn");
-    minus.innerHTML=`<i class="bi bi-dash"></i>`
-    minus.setAttribute("id","minus")
+    minus.innerHTML = `<i class="bi bi-dash"></i>`;
+    minus.setAttribute("id", "minus");
 
-    let qty=document.createElement("input")
-    qty.innerHTML="1"
-    qty.type= "number"
-    qty.setAttribute("id","qty")
+    let qty = document.createElement("input");
+    qty.innerHTML = "1";
+    qty.type = "number";
+    qty.setAttribute("id", "qty");
 
     let plus = document.createElement("btn");
-    plus.innerHTML=`<i class="bi bi-plus"></i>`
-    plus.setAttribute("id","plus")
+    plus.innerHTML = `<i class="bi bi-plus"></i>`;
+    plus.setAttribute("id", "plus");
 
-    let left=document.createElement('div')
-    left.setAttribute("id","left");
+    let total = document.createElement("div");
+    total.setAttribute("id", "total");
 
-    let del=document.createElement("btn")
-    del.innerHTML=`<i class="bi bi-trash-fill"></i>`
-    del.setAttribute("id","del")
+    let totalprice = document.createElement("P");
+    totalprice.innerHTML = `Rs: ${pro.price}`;
+    totalprice.setAttribute("id", "totalprice");
+
+    let left = document.createElement("div");
+    left.setAttribute("id", "left");
+
+    let del = document.createElement("btn");
+    del.innerHTML = `<i class="bi bi-trash-fill"></i>`;
+    del.setAttribute("id", "del");
 
     head.append(img);
 
-    center.append(title,price,category);
-    midcenter.append(minus,qty,plus)
-    left.append(del)
-    box.append(head,center,midcenter,left);
+    center.append(title, price, category);
+    midcenter.append(minus, qty, plus);
+    total.append(totalprice);
+    left.append(del);
+    box.append(head, center, midcenter, total, left);
 
     // menu.append(category, buy);
 
