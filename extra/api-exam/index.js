@@ -6,9 +6,10 @@ document.querySelector(".menu").addEventListener("click", () => {
   document.querySelector(".menu-bar").classList.toggle("hidden");
 });
 
-let data = [];
+let datas=[]
 
 const api = (data) => {
+  document.querySelector(".main").innerHTML=""
  data.map((ele) => {
     let box = document.createElement("div");
     box.setAttribute("id", "box");
@@ -41,27 +42,48 @@ const api = (data) => {
     box.append(image, title, price, cat);
     document.querySelector(".main").append(box);
   });
-  console.log(data);
 };
 
-fetch("https://fakestoreapi.com/products")
-.then((res) => res.json())
-.then(datas => data = datas
-)
-window.addEventListener('load',() => sortlow("lth"))
+
 const sortlow = (val) => {
-    console.log("hi");
+    console.log(datas);
     if (val == "lth") {
-      let price = data.sort((a, b) => a.price - b.price);
+      let price = datas.sort((a, b) => a.price - b.price);
+      console.log(price);
+      api(price);
+    }
+    else {
+      let price = datas.sort((a, b) => b.price - a.price);
       console.log(price);
       api(price);
     }
   };
-  function hi()
-{
- let time=setTimeout(api(data),2000)
- console.log(time);
+  const Search=(val)=>{
+    let temp= datas.filter((ele)=>ele.title.toLowerCase().includes(val.toLowerCase()))
+    console.log(temp);
+    api(temp)
 }
-  document.querySelector(".lth").addEventListener("click", () => sortlow("lth"));
-  window.addEventListener("load",hi)
+const handleSearch=(e)=>{
+    e.preventDefault();
 
+    let val=document.querySelector('.search-box').value;
+    Search(val)
+}
+const getData =async()=>{
+  let res=await fetch('https://fakestoreapi.com/products')
+  let data=await res.json();
+  datas=data
+  console.log(data);
+
+  api(datas)
+  document.querySelector(".lth").addEventListener("click", () => sortlow("lth"));
+  document.querySelector(".htl").addEventListener("click", () => sortlow("htl"));
+  document.querySelector('.right').addEventListener('submit',handleSearch)
+  
+
+}
+
+  
+  
+
+getData()
