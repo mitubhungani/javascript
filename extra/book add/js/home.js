@@ -1,10 +1,10 @@
 // --------------menu-------------------------
 
-// document.querySelector(".menu-bar").classList.add("hidden");
+document.querySelector(".menu-bar").classList.add("hidden");
 
-// document.querySelector(".menu").addEventListener("click", () => {
-//   document.querySelector(".menu-bar").classList.toggle("hidden");
-// });
+document.querySelector(".menu").addEventListener("click", () => {
+  document.querySelector(".menu-bar").classList.toggle("hidden");
+});
 
 let product = JSON.parse(localStorage.getItem("products")) || [];
 let localcart = JSON.parse(localStorage.getItem("carts")) || [];

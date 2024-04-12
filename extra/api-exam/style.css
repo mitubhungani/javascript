@@ -135,23 +135,34 @@ hr {
   color: black;
 }
 
-p {
+.profile-p,
+.htl,
+.lth {
   text-align: center;
   margin: 0px;
   padding: 5px;
   color: black;
 }
 
-p:hover {
+.lth:hover {
   background-color: black;
   color: white;
 }
 
-.carte{
+.htl:hover {
+  background-color: black;
+  color: white;
+}
+
+.profile-p:hover {
+  background-color: black;
+  color: white;
+}
+
+.carte {
   display: block;
   text-align: center;
 }
-
 
 .right {
   width: 48%;
@@ -171,69 +182,56 @@ i {
   border-radius: 10px;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
 /* -------------second-bar-end------------------- */
 
-/* -------------------main---------------------------- */
-
+/* -------------------main-css------------------ */
 .main {
-  width: 95%;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 #box {
-  margin: 10px auto;
-  width: 15%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  width: 19%;
   border-radius: 10px;
-}
-
-#title {
-  margin: 10px auto;
+  margin: 10px;
 }
 
 #image {
   width: 90%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
+  text-align: center;
 }
 
 #img {
-  margin: 10px auto;
-  height: 200px;
   width: 100%;
+  object-fit: contain;
+  height: 200px;
 }
 
-#pri {
-  width: 90%;
-  margin: auto;
+#title {
+  margin: 0px 0px 20px 10px;
+  font-size: 17px;
 }
+
+/* .main>#disc{
+    margin: 0px 0px 0px 10px;
+}  */
+
 #price {
-  margin: 10px auto;
-  text-align: left;
+  margin: 0px 0px 20px 10px;
+  text-align: center;
 }
 
-#bott {
-  margin: 10px auto;
-  display: flex;
-  width: 90%;
-  justify-content: space-evenly;
-}
-
-#del,
-#cart {
-  width: 40%;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid black;
-  background-color: transparent;
+#cat {
+  margin: 0px 0px 20px 10px;
+  text-align: center;
 }
