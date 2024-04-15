@@ -1,17 +1,29 @@
-const post = (datas) => {
-  fetch("http://localhost:3000/product", {
-    method: "POST",
-    headers: { "Content-Type": "Aplication/json" },
-    body: JSON.stringify(datas)
-  });
-};
+const get =()=>{
+  fetch("http://localhost:3000/product")
+  .then((res)=>res.json())
+  .then((datas)=>ui(datas))
+}
+const post =(datas)=>{
+  fetch("http://localhost:3000/product",{
+    method:"POST",
+    headers: {'Content-Type': 'application/json'},
+    body:JSON.stringify(datas)
+  })
+}
 
-const get = (datas) => {
-  fetch("http://localhost:3000/product", {
-    method: "GET"
-  });
-};
+const update=(id,datas)=>{
+  fetch(`${id}`,{
+    method:"PATCH",
+    headers:{'Content-Type': 'application/json'},
+    body:JSON.stringify(datas)
+  })
+}
 
+const dele=(id)=>{
+  fetch(`http://localhost:3000/product/${id}`,{
+    method:"DELETE"
+  })
+}
 
 
 const show = (e) => {
@@ -22,9 +34,8 @@ const show = (e) => {
     price: document.getElementById("price").value,
   };
   console.log(hi);
-  datas.push(hi);
-  post(datas);
-  ui(datas);
+  post(hi)
+  get()
 };
 document.getElementById("for").addEventListener("submit", show);
 
@@ -46,13 +57,27 @@ const ui = (data) => {
     price.innerHTML = ele.price;
     price.setAttribute("id", "price");
 
+    let btn=document.createElement("div")
+    btn.setAttribute("id","btn")
+
+    let up = document.createElement("button");
+    up.innerHTML = "Update";
+    up.setAttribute("id", "up");
+
+    
+
     let del = document.createElement("button");
     del.innerHTML = "Delete";
     del.setAttribute("id", "del");
 
-    box.append(title, image, price.del);
+    del.addEventListener("click", () => {dele(ele.id)});
+
+    btn.append(up,del)
+
+    box.append(title, image, price,btn);
     document.getElementById("main").append(box);
   });
 };
 
 document.getElementById("main").addEventListener("submit", ui);
+get()
