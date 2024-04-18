@@ -1,30 +1,29 @@
-const get =()=>{
+const get = () => {
   fetch("http://localhost:3000/product")
-  .then((res)=>res.json())
-  .then((datas)=>ui(datas))
-}
-const post =(datas)=>{
-  fetch("http://localhost:3000/product",{
-    method:"POST",
-    headers: {'Content-Type': 'application/json'},
-    body:JSON.stringify(datas)
-  })
-}
+    .then((res) => res.json())
+    .then((datas) => ui(datas));
+};
+const post = (datas) => {
+  fetch("http://localhost:3000/product", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(datas),
+  });
+};
 
-const update=(id,datas)=>{
-  fetch(`${id}`,{
-    method:"PATCH",
-    headers:{'Content-Type': 'application/json'},
-    body:JSON.stringify(datas)
-  })
-}
+const update = (id, datas) => {
+  fetch(`http://localhost:3000/product/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(datas),
+  });
+};
 
-const dele=(id)=>{
-  fetch(`http://localhost:3000/product/${id}`,{
-    method:"DELETE"
-  })
-}
-
+const dele = (id) => {
+  fetch(`http://localhost:3000/product/${id}`, {
+    method: "DELETE",
+  });
+};
 
 const show = (e) => {
   e.preventDefault();
@@ -34,10 +33,24 @@ const show = (e) => {
     price: document.getElementById("price").value,
   };
   console.log(hi);
-  post(hi)
-  get()
+
+  if (id == -1) {
+    post(hi);
+  } else {
+    update(id, hi);
+  }
+  get();
 };
 document.getElementById("for").addEventListener("submit", show);
+
+let id = -1;
+
+const edit = (data) => {
+  document.getElementById("title").value = data.title;
+  document.getElementById("img").value = data.image;
+  document.getElementById("price").value = data.price;
+  id = data.id;
+};
 
 const ui = (data) => {
   document.getElementById("main").innerHTML = "";
@@ -57,27 +70,31 @@ const ui = (data) => {
     price.innerHTML = ele.price;
     price.setAttribute("id", "price");
 
-    let btn=document.createElement("div")
-    btn.setAttribute("id","btn")
+    let btn = document.createElement("div");
+    btn.setAttribute("id", "btn");
 
     let up = document.createElement("button");
     up.innerHTML = "Update";
     up.setAttribute("id", "up");
 
-    
+    up.addEventListener("click", () => {
+      edit(ele);
+    });
 
     let del = document.createElement("button");
     del.innerHTML = "Delete";
     del.setAttribute("id", "del");
 
-    del.addEventListener("click", () => {dele(ele.id)});
+    del.addEventListener("click", () => {
+      dele(ele.id);
+    });
 
-    btn.append(up,del)
+    btn.append(up, del);
 
-    box.append(title, image, price,btn);
+    box.append(title, image, price, btn);
     document.getElementById("main").append(box);
   });
 };
 
 document.getElementById("main").addEventListener("submit", ui);
-get()
+get();
