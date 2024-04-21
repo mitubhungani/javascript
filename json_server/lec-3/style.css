@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 50%;
+    margin: auto;
+    top: 50%;
+}
+
+.upper{
+    width: 50%;
+    margin:20px auto;
+}
+
+.bottom{
+    width: 100%;
+    margin: auto;
+}
+
+.for{
+    display: flex
+}

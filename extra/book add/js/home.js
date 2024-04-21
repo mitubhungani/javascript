@@ -90,10 +90,9 @@ const sortup = (val) => {
 document.querySelector(".htl").addEventListener("click", () => sortup("htl"));
 
 const search = (val) => {
-    let temp = product.filter((a) => a.title.includes(val));
-    console.log(temp);
-    ui(temp);
-
+  let temp = product.filter((a) => a.title.includes(val));
+  console.log(temp);
+  ui(temp);
 };
 
 const hebdelsearch = (e) => {
@@ -102,4 +101,4 @@ const hebdelsearch = (e) => {
   console.log(temp);
   search(temp);
 };
-document.querySelector(".right").addEventListener("click",hebdelsearch);
+document.querySelector(".right").addEventListener("click", hebdelsearch);
