@@ -1,46 +1,10 @@
 {
   "user": [
     {
-      "id": "7c30",
+      "id": "0070",
       "username": "mitu",
       "email": "mitu@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "dd2c",
-      "username": "mitu",
-      "email": "mitu",
-      "password": "1223"
-    },
-    {
-      "id": "0603",
-      "username": "xgfh",
-      "email": "fgxhf",
-      "password": "54"
-    },
-    {
-      "id": "1579",
-      "username": "dfhh",
-      "email": "zfhdh",
-      "password": "4524"
-    },
-    {
-      "id": "e33e",
-      "username": "dhdh",
-      "email": "var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/;",
-      "password": "ffhb"
-    },
-    {
-      "id": "0c0d",
-      "username": "",
-      "email": "",
-      "password": ""
-    },
-    {
-      "id": "6806",
-      "username": "sdfhd",
-      "email": "dfghd",
-      "password": "58757"
+      "password": "000"
     }
   ]
 }
