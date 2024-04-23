@@ -10,19 +10,27 @@ const nav = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../html/cart.html">Cart</a>
+                    <a class="nav-link active" aria-current="page" href="../html/product.html">Product</a>
+                </li>
+                
+                <li class="nav-item">
+                <a class="nav-link" href="../html/cart.html">Cart</a>
+                </li>
+                
+                <li class="nav-item">
+                <a class="nav-link" href="../html/login.html">Login</a>
+                </li>
+                
+                <li class="nav-item">
+                <a class="nav-link" href="../html/signup.html">Sigup</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../html/login.html">Login</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/signup.html">Sigup</a>
+                    <a class="nav-link active" aria-current="page" href="../html/addproduct.html">Add product</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">

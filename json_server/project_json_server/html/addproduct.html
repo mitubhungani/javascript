@@ -17,18 +17,16 @@
 
     </div>
 
-    <form id="for">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-</body>
-<script src="../js/login.js" type="module"></script>
+    <form class="main">
+        <label>Title</label>
+        <input type="text" placeholder="Enter title here..." id="title">
+        <label>Image</label>
+        <input type="url" placeholder="Enter image URL..." id="img">
+        <label>Price</label>
+        <input type="number" placeholder="Enter price here..." id="price">
+        <button id="btn">Submit</button>
+    </form>
 
+</body>
+<script src="../js/addproduct.js" type="module"></script>
 </html>

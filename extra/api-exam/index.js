@@ -82,8 +82,4 @@ const getData =async()=>{
   
 
 }
-
-  
-  
-
 getData()

@@ -28,7 +28,7 @@ document.getElementById("navbar").innerHTML = nav();
 
 // post
 
-const userpost = (url,data) => {
+const userpost = (url, data) => {
   try {
     fetch(url, {
       method: "POST",
@@ -49,14 +49,14 @@ const isexists1 = (user) => {
       .then((data) => {
         console.log(data);
         if (data.length == 0) {
-          isexists(user)
+          isexists(user);
         } else {
           alert(`${user.username} Username is already exists.`);
         }
       });
-    } catch (error) {
-      console.log(error);
-    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const isexists = (user) => {
@@ -71,11 +71,10 @@ const isexists = (user) => {
           alert(`${user.email} Email id is already exists.`);
         }
       });
-    } catch (error) {
-      console.log(error);
-    }
+  } catch (error) {
+    console.log(error);
+  }
 };
-
 
 //velidation
 const user = (e) => {
@@ -88,7 +87,6 @@ const user = (e) => {
   };
 
   isexists1(user);
-  
 };
 
 document.getElementById("for").addEventListener("submit", user);
