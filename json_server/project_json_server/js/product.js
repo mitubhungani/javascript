@@ -10,7 +10,7 @@ const isexist = async (url, data) => {
     let data = await res.json();
     window.location.href = "../html/cart.html";
   } catch (error) {
-    postdata(url, data);
+    postdata(url,{...data,qty:1});
   }
 };
 

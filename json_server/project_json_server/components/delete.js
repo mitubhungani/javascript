@@ -1,11 +1,7 @@
-const DeleteProduct =()=>{
-    try {
-        fetch(`http://localhost:3000/cart/${id}`,{
-            method: 'DELETE' ,
-        })
-    } catch (error) {
-        console.log(error.massage);
-    }
-}
+const DeleteProduct = (url) => {
+  fetch(url, {
+    method: "DELETE",
+  });
+};
 
-export default DeleteProduct
+export default DeleteProduct;
