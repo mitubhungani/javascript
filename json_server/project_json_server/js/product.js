@@ -1,8 +1,18 @@
 import getdata from "../components/get.js";
 import nav from "../components/navbar.js";
-// import postdata from "../components/post.js";
+import postdata from "../components/post.js";
 
 document.getElementById("navbar").innerHTML = nav();
+
+const isexist = async (url, data) => {
+  try {
+    let res = await fetch(`http://localhost:3000/cart/${data.id}`);
+    let data = await res.json();
+    window.location.href = "../html/cart.html";
+  } catch (error) {
+    postdata(url, data);
+  }
+};
 
 const ui = (data) => {
   // document.getElementById("show").innerHTML=""
@@ -19,7 +29,7 @@ const ui = (data) => {
     title.setAttribute("id", "title");
 
     let price = document.createElement("p");
-    price.innerHTML = `Price: ${pro.price}`;
+    price.innerHTML = `₹: ${pro.price}`;
     price.setAttribute("id", "price");
 
     let btn = document.createElement("div");
@@ -29,15 +39,20 @@ const ui = (data) => {
     cart.innerHTML = "Add to Cart";
     cart.setAttribute("id", "cart");
 
+    cart.addEventListener("click", () => {
+      console.log(pro);
+      isexist("http://localhost:3000/cart", pro);
+    });
+
     btn.append(cart);
     box.append(img, title, price, btn);
     document.getElementById("show").append(box);
   });
 };
 
-const get = () => {
-  let res = getdata("http://localhost:3000/product");
-  let data = res;
+const get = async () => {
+  let res = await getdata("http://localhost:3000/product");
+  let data = await res;
   ui(data);
   // ,{
   //     method:"GET",
