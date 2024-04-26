@@ -39,7 +39,7 @@ const nav = () => {
             </form>
         </div>
     </div>
-</nav>`
+</nav>`;
 };
 
 export default nav;
