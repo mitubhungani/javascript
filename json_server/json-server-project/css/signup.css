@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .signin {
+    width: 100%;
+    height: 100vh;
+    padding-top: 1px;
+  }
+  
+  .form {
+    padding: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px white;
+    width: 30%;
+    margin: auto;
+    margin-top: 150px;
+  }
+  
+  .title {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .title span {
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 4px 4px black;
+    font-size: 15px;
+    margin: auto;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: black;
+    opacity: 0.8;
+  }
+  .button-log:active,
+  .button-confirm:active {
+    box-shadow: 3px 3px black;
+    transform: translate(3px, 3px);
+  }
+  
+  .button-confirm {
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: red;
+    box-shadow: 4px 4px black;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+  
+  .signup {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+  }
+  
+  .signup-click {
+    color: blue;
+  }
+  
+  .signup-click:hover {
+    background-color: transparent;
+  }
+  

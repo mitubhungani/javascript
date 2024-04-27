@@ -9,10 +9,10 @@ const nav = () => {
   </label>
   <label class="logo">DesignX</label>
   <ul>
-      <li><a class="active" href="#">New Arrivals</a></li>
+      <li><a class="active" href="../html/index.html">New Arrivals</a></li>
       <li><a href="#">Men</a></li>
       <li><a href="#">Women</a></li>
-      <li><a href="#">Sign in</a></li>
+      <li><a href="../html/signin.html">Sign in</a></li>
       <li><a href="#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a></li>
       <li><a href="#"><i class="fa-solid fa-bag-shopping fa-lg"></i></a></li>
   </ul>

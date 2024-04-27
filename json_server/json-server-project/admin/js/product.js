@@ -1,40 +1,7 @@
 import nav from "../admin-components/admin-nav.js";
-import getdata from "../admin-components/get.js";
 import deletedata from "../admin-components/delete.js";
-import postdata from "../admin-components/post.js";
-import updatedata from "../admin-components/update.js";
 
 document.getElementById("header").innerHTML = nav();
-
-const show = () => {
-  e.preventDefault();
-  let hi = {
-    document: getElementById("title").value,
-    document: getElementById("img").value,
-    document: getElementById("category").value,
-    document: getElementById("gender").value,
-    document: getElementById("price").value,
-  };
-  console.log(hi);
-  console.log(id);
-
-  if (id == -1) {
-    postdata("http://localhost:3000/product", hi);
-  } else {
-    updatedata(`http://localhost:3000/product/${id}`, hi);
-  }
-  getdata("http://localhost:3000/product");
-};
-let id = -1;
-
-const edit = (data) => {
-  document.getElementById("title").value = data.title;
-  document.getElementById("img").value = data.image;
-  document.getElementById("category").value = data.category;
-  // document.getElementById("gender").value = data.gender;
-  document.getElementById("price").value = data.price;
-  id = data.id;
-};
 
 const proui = (data) => {
   document.querySelector(".show-products").innerHTML = "";
@@ -66,14 +33,14 @@ const proui = (data) => {
     price.innerHTML = `Price: ${pro.price}`;
     price.setAttribute("id", "price");
 
-    let update = document.createElement("span");
-    update.innerHTML = `<i class="fa-solid fa-pen-to-square fa-lg"></i>`;
-    update.setAttribute("id", "updateBtn");
-    update.addEventListener("click", () => {
-      // window.location.href = "../html/updateproduct.html";
-      edit(pro);
-    });
-    // update.addEventListener("click", ()=>{window.location.href='./editProduct.html?productId='+pro._id})
+    // let update = document.createElement("span");
+    // update.innerHTML = `<i class="fa-solid fa-pen-to-square fa-lg"></i>`;
+    // update.setAttribute("id", "updateBtn");
+    // update.addEventListener("click", () => {
+    //   // window.location.href = "../html/updateproduct.html";
+    //   edit(pro);
+    // });
+    // // update.addEventListener("click", ()=>{window.location.href='./editProduct.html?productId='+pro._id})
 
     let deleteBtn = document.createElement("span");
     deleteBtn.innerHTML = `<i class="fa-solid fa-trash-can fa-lg"></i>`;
@@ -83,7 +50,7 @@ const proui = (data) => {
       deletedata(`http://localhost:3000/product/${pro.id}`);
     });
 
-    box.append(span, image, title, gender, category, price, update, deleteBtn);
+    box.append(span, image, title, gender, category, price, deleteBtn);
     document.querySelector(".show-products").append(box);
   });
 };
