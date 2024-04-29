@@ -7,16 +7,23 @@
 }
 body {
   font-family: montserrat;
-  background-color: black;
+  background-color: rgb(4, 0, 23);
 }
 nav {
-  /* background: black; */
   height: 80px;
   width: 100%;
-  position: fixed;
   overflow: hidden;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-  /* border-radius: 0px 0px 10px 10px; */
+}
+
+.search{
+  border: 2px solid red;
+  background-color: transparent;
+  color:white;
+  border-radius: 5px;
+  align-items: center;
+  height: 30px;
+  text-align: center;
+  outline: none;
 }
 
 label.logo {

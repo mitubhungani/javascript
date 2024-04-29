@@ -1,0 +1,112 @@
+* {
+  text-transform: uppercase;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#cart {
+  width: 100%;
+  margin: 20px auto;
+}
+
+#box {
+  width: 95%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  box-shadow: rgba(109, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: space-between;
+  height: 100px;
+  margin: 30px auto;
+  font-size: 13px;
+  border-radius: 10px;
+  color: white;
+}
+
+#img {
+  width: 90px;
+}
+
+#btndiv {
+  border: 2px solid red;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+#minus {
+  cursor: pointer;
+  color: blue;
+  font-size: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+#qty {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#add {
+  cursor: pointer;
+  color: blue;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+}
+
+#del {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid red;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  padding: 0px 10px;
+  border-radius: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+#total-check {
+  width: 95%;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  box-shadow: rgba(109, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: end;
+  height: 100px;
+  margin: 30px auto;
+  font-size: 13px;
+  border-radius: 10px;
+  color: white;
+}
+
+#side {
+  color: white;
+  font-size: 20px;
+  margin: 0px 200px 0px 0px;
+}
+
+#check-btn {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid red;
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  padding: 0px 10px;
+  border-radius: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
