@@ -13,7 +13,7 @@ const nav = () => {
       <li><a class="active" href="../html/index.html">New Arrivals</a></li>
       <li><a href="../html/men.html">Product</a></li>
       <li><a href="../html/signin.html">Sign in</a></li>
-      <li id="search-main"><input class="search" placeholder="Search" type="search"><a href="#"><i id="search-btn" class="fa-solid fa-magnifying-glass fa-lg"></i></a></li>
+      <li id="search-main"><input class="search" placeholder="Search" type="search"><a href="#" class="no"><i id="search-btn" class="fa-solid fa-magnifying-glass fa-lg"></i></a></li>
       <li><a href="../html/cart.html"><i class="fa-solid fa-bag-shopping fa-lg"></i></a></li>
   </ul>
 </nav>`;

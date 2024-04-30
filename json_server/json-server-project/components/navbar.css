@@ -26,6 +26,10 @@ nav {
   outline: none;
 }
 
+.no:hover{
+  background-color: transparent;
+}
+
 label.logo {
   color: white;
   font-size: 35px;

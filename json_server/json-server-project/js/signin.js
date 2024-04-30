@@ -1,34 +1,44 @@
-import postdata from "../components/post";
+import postdata from "../components/post.js";
 
-
-
-const log =(e)=>{
-    e.preventDefault()
-    let data={
-        email:document.getElementById('email').value,
-        password:document.getElementById('password').value
+const log = (e) => {
+  e.preventDefault();
+  let data = {
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
+  };
+  console.log(data);
+  isExist(data);
+};
+const isExist = async (dataa) => {
+  try {
+    let res = await fetch(
+      `http://localhost:3000/user/?email=${dataa.email}&password=${dataa.password}`
+    );
+    let datas = await res.json();
+    console.log(datas);
+    if (datas.length > 0) {
+      window.location.href = "../html/index.html";
     }
-    console.log(data);
-    
-    const response = fetch("http://localhost:3000/user", {
-           method: 'POST', // Assuming the server expects POST method for login
-             headers: {
-                 'Content-Type': 'application/json'
-             },
-            body: JSON.stringify(data) // Convert the JavaScript object to a JSON string
-        });
+    // if (datas.length == 1) {
+    //   alert("no");
+    // }
+  } catch (error) {}
+};
 
-        if()
+// const isnotexist =async (dataa)=>{
+//     try {
+//         let res = await fetch(
+//           `http://localhost:3000/user/?email=${dataa.email}&password=${dataa.password}`
+//         );
+//         let datas = await res.json();
+//         console.log(datas);
+//         if (datas.length != 0) {
+//           alert("no")
+//         }
+//       } catch (error) {}
+// }
 
-    window.location.href = "../html/index.html";
-}
-
-document.querySelector(".form").addEventListener("submit",log)
-
-
-
-
-
+document.querySelector(".form").addEventListener("submit", log);
 
 // import getData from "../components/get.js"; // Ensure this module exports what you need, if used
 

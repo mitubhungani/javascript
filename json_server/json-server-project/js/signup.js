@@ -5,7 +5,7 @@ const isexist1 = (use) => {
     fetch(`http://localhost:3000/user?username=${use.username}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(use);
         if (data.length == 0) {
           isexist2(use);
         } else {
@@ -22,14 +22,15 @@ const isexist2 = (use) => {
     fetch(`http://localhost:3000/user?email=${use.email}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(use);
         if (data.length == 0) {
+          console.log("hi");
           postdata("http://localhost:3000/user", use);
         } else {
           alert(`${use.email} Email is already exist.`);
         }
       });
-  } catch (error) {
+    } catch (error) {
     console.log(error);
   }
 };
@@ -44,7 +45,7 @@ const user = (e) => {
   };
   console.log(use);
   isexist1(use);
-  window.location.href = "../html/index.html";
+  
 };
 
 document.querySelector(".form").addEventListener("submit", user);

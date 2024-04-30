@@ -4,23 +4,25 @@ import nav from "../components/navbar.js";
 
 document.getElementById("header").innerHTML = nav();
 
-const isexist = async (url, data) => {
+const isexist = async (data) => {
   try {
     let res = await fetch(`http://localhost:3000/cart/${data.id}`);
-    let data = await res.json();
-    window.location.href = "../html/cart.html";
-  } catch (error) {
-    postdata(url,{...data,qty:1});
+    let dataa =await res.json()
+
+    window.location.href="../html/cart.html"
+  }
+  catch(error){
+    postdata("http://localhost:3000/cart", {...data,qty:1});
   }
 };
 
 const ui = (data) => {
   document.getElementById("product").innerHTML = "";
-  data.map((pro, i) => {
+  data.map((pro) => {
     let box = document.createElement("div");
     box.setAttribute("id", "box");
 
-    let imgdiv=document.createElement("div");
+    let imgdiv = document.createElement("div");
     imgdiv.setAttribute("id", "imgdiv");
 
     let image = document.createElement("img");
@@ -50,19 +52,18 @@ const ui = (data) => {
     add.innerHTML = "Add to cart";
     add.setAttribute("id", "add");
 
-    add.addEventListener('click', ()=>{
-      isexist("http://localhost:3000/cart",pro)
-    })
+    add.addEventListener("click", () => {
+      isexist(pro);
+    });
 
     btn.append(add);
 
-    imgdiv.append(image)
+    imgdiv.append(image);
 
     box.append(imgdiv, title, gender, category, price, btn);
     document.getElementById("product").append(box);
   });
 };
-
 
 // const searchno=(val)=>{
 //   let tempa=product.filter((pro)=>pro.title.includes(val))
@@ -84,7 +85,6 @@ const ui = (data) => {
 // };
 // get();
 
-
 const get = async () => {
   let res = await getdata("http://localhost:3000/product");
   let data = await res;
@@ -97,3 +97,12 @@ const get = async () => {
 };
 
 get();
+
+
+// window.addEventListener("load", () => {
+//   const loader = document.getElementById("loader")
+//   loader.classList.add("loader-hidden")
+//   loader.addEventListener("transitionend",()=>{
+//       document.body.removeChild("#loader")
+//   })
+// })
