@@ -7,12 +7,11 @@ document.getElementById("header").innerHTML = nav();
 const isexist = async (data) => {
   try {
     let res = await fetch(`http://localhost:3000/cart/${data.id}`);
-    let dataa =await res.json()
+    let dataa = await res.json();
 
-    window.location.href="../html/cart.html"
-  }
-  catch(error){
-    postdata("http://localhost:3000/cart", {...data,qty:1});
+    window.location.href = "../html/cart.html";
+  } catch (error) {
+    postdata("http://localhost:3000/cart", { ...data, qty: 1 });
   }
 };
 
@@ -65,30 +64,26 @@ const ui = (data) => {
   });
 };
 
-// const searchno=(val)=>{
-//   let tempa=product.filter((pro)=>pro.title.includes(val))
-//   console.log(tempa);
-//   show(tempa)
-// }
-// const hebdelsearch=(e)=>{
-//   e.preventDefault();
-//   let temp= document.querySelector(".search").value
-//   console.log(temp);
-//   searchno(temp);
-// }
-// document.getElementById('search-btn').addEventListener("submit",hebdelsearch)
-
-// const get = async () => {
-//   let res = await fetch("http://localhost:3000/product");
-//   let data = await res.json();
-//   ui(data);
-// };
-// get();
+const searchno=async (val)=>{
+  let res = await getdata("http://localhost:3000/product");
+  let Productss = await res;
+  let tempa= Productss.filter((pro)=>pro.title.includes(val))
+  console.log(tempa);
+  ui(tempa)
+}
+const hebdelsearch=(e)=>{
+  e.preventDefault();
+  let temp= document.querySelector(".search").value
+  console.log(temp);
+  searchno(temp);
+}
 
 const get = async () => {
   let res = await getdata("http://localhost:3000/product");
   let data = await res;
   ui(data);
+  document.querySelector('#forSearch').addEventListener("submit",hebdelsearch)
+  document.querySelector('#search-btn').addEventListener("click",hebdelsearch)
   // ,{
   //     method:"GET",
   //     headers:{"Content-Type":"application/json"},
@@ -97,12 +92,3 @@ const get = async () => {
 };
 
 get();
-
-
-// window.addEventListener("load", () => {
-//   const loader = document.getElementById("loader")
-//   loader.classList.add("loader-hidden")
-//   loader.addEventListener("transitionend",()=>{
-//       document.body.removeChild("#loader")
-//   })
-// })

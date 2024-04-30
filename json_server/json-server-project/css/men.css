@@ -44,12 +44,12 @@
 }
 
 #imgdiv{
-    text-align: center;
     margin: 5px auto;
 }
 
 #img{
-    width: 100%;
+    width: 228px;
+    height: 228px;
     background-color: black;
 }
 
@@ -91,41 +91,3 @@
 }
 
 
-/* -----------------loader-------------------------------- */
-
-/* #loader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f7f9fb;
-    transition: opacity 0.75s, visibility 0.75s;
-  }
-  
-  #loader-hideden{
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  #loader::after{
-    content: "";
-    width: 75px;
-    height: 75px;
-    border: 15px solid #dddddd;
-    border-top-color: red;
-    border-radius: 50%;
-    animation: loading 0.75s ease infinite;
-  }
-  
-  @keyframes loading{
-    from{
-        transform: rotate(0turn);
-    }
-    to{
-        transform: rotate(1turn);
-    }
-  } */
