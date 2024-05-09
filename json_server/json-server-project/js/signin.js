@@ -19,9 +19,9 @@ const isExist = async (dataa) => {
     if (datas.length > 0) {
       window.location.href = "../html/index.html";
     }
-    // if (datas.length == 1) {
-    //   alert("no");
-    // }
+    else{
+      alert("Enter valid information")
+    }
   } catch (error) {}
 };
 

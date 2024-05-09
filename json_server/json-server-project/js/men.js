@@ -9,11 +9,71 @@ const isexist = async (data) => {
     let res = await fetch(`http://localhost:3000/cart/${data.id}`);
     let dataa = await res.json();
 
-    window.location.href = "../html/cart.html";
+    if (dataa.length == 0) {
+    } else {
+      document.querySelector(".add-to-cart").classList.add("alert");
+      document.querySelector(".add-to-cart div p").innerHTML =
+        "Already existed";
+      setTimeout(() => {
+        document.querySelector(".add-to-cart").classList.add("alert-back");
+      }, 2000);
+      setTimeout(() => {
+        document.querySelector(".add-to-cart").classList.remove("alert-back");
+        document.querySelector(".add-to-cart").classList.remove("alert");
+      }, 3000);
+    }
   } catch (error) {
     postdata("http://localhost:3000/cart", { ...data, qty: 1 });
   }
 };
+
+document.querySelector(".head-category-div").addEventListener("click", () => {
+  document.querySelector(".category-list").classList.toggle("hiddencate");
+});
+
+//show category in side bar
+
+const sideui = (data) => {
+  document.querySelector(".category-list").innerHTML = "";
+  data.map((cat) => {
+    let catbox = document.createElement("div");
+    catbox.setAttribute("id", "catbox");
+
+    let catinfo = document.createElement("li");
+    catinfo.innerHTML = cat.category;
+    catinfo.setAttribute("id", "catinfo");
+
+    catinfo.addEventListener("click", () => {
+      getcato(cat.category);
+    });
+
+    catbox.append(catinfo);
+    document.querySelector(".category-list").append(catbox);
+    console.log(cat);
+  });
+};
+
+//get category product
+
+const getcato = async (cate) => {
+  let res = await getdata(`http://localhost:3000/product?category=${cate}`);
+  let data = await res;
+  ui(data);
+};
+
+getcato();
+
+//get category
+
+const getcat = async () => {
+  let res = await getdata("http://localhost:3000/category");
+  let data = await res;
+  sideui(data);
+};
+
+getcat();
+
+//ui
 
 const ui = (data) => {
   document.getElementById("product").innerHTML = "";
@@ -51,7 +111,9 @@ const ui = (data) => {
     add.innerHTML = "Add to cart";
     add.setAttribute("id", "add");
 
-    add.addEventListener("click", () => {
+    add.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       isexist(pro);
     });
 
@@ -64,31 +126,54 @@ const ui = (data) => {
   });
 };
 
-const searchno=async (val)=>{
+//lth
+
+const sortdown = async () => {
   let res = await getdata("http://localhost:3000/product");
   let Productss = await res;
-  let tempa= Productss.filter((pro)=>pro.title.includes(val))
+  let tempa = Productss.sort((a, b) => a.price - b.price);
   console.log(tempa);
-  ui(tempa)
-}
-const hebdelsearch=(e)=>{
+  ui(tempa);
+};
+
+document.querySelector(".lth").addEventListener("click", sortdown);
+
+//htl
+
+const sortup = async () => {
+  let res = await getdata("http://localhost:3000/product");
+  let Productss = await res;
+  let tempa = Productss.sort((a, b) => b.price - a.price);
+  console.log(tempa);
+  ui(tempa);
+};
+
+document.querySelector(".htl").addEventListener("click", sortup);
+
+//search
+
+const searchno = async (val) => {
+  let res = await getdata("http://localhost:3000/product");
+  let Productss = await res;
+  let tempa = Productss.filter((pro) => pro.title.includes(val));
+  console.log(tempa);
+  ui(tempa);
+};
+const hebdelsearch = (e) => {
   e.preventDefault();
-  let temp= document.querySelector(".search").value
+  let temp = document.querySelector(".search").value;
   console.log(temp);
   searchno(temp);
-}
+};
+
+//get
 
 const get = async () => {
   let res = await getdata("http://localhost:3000/product");
   let data = await res;
   ui(data);
-  document.querySelector('#forSearch').addEventListener("submit",hebdelsearch)
-  document.querySelector('#search-btn').addEventListener("click",hebdelsearch)
-  // ,{
-  //     method:"GET",
-  //     headers:{"Content-Type":"application/json"},
-  //     body:JSON.stringify(data),
-  // })
+  document.querySelector("#forSearch").addEventListener("submit", hebdelsearch);
+  document.querySelector("#search-btn").addEventListener("click", hebdelsearch);
 };
 
 get();

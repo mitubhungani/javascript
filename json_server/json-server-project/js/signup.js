@@ -26,6 +26,7 @@ const isexist2 = (use) => {
         if (data.length == 0) {
           console.log("hi");
           postdata("http://localhost:3000/user", use);
+          window.location.href="../html/index.html"
         } else {
           alert(`${use.email} Email is already exist.`);
         }
