@@ -48,6 +48,10 @@ const ui = (data) => {
     title.innerHTML = pro.title;
     title.setAttribute("id", "title");
 
+    let price = document.createElement("p");
+    price.innerHTML = `₹ : ${pro.price}`;
+    price.setAttribute("id", "price");
+
     let td3 = document.createElement("td");
     td3.setAttribute("id", "btndiv");
 
@@ -83,7 +87,7 @@ const ui = (data) => {
     });
 
     td5.append(del);
-    tr.append(td1, img, title, td3, total, td5);
+    tr.append(td1, img, title, price, td3, total, td5);
     document.getElementById("cart").append(tr);
     cart += pro.price * pro.qty;
   });
