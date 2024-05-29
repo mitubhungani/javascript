@@ -19,7 +19,7 @@ const handleqty = (hi, data) => {
   }
 };
 
-let cart=0
+let cart = 0;
 
 const ui = (data) => {
   data.map((pro, i) => {
@@ -81,15 +81,14 @@ const ui = (data) => {
     td5.append(del);
     tr.append(td1, td2, td3, td4, td5);
     document.getElementById("cart").append(tr);
-    cart+=pro.price*pro.qty;
-    document.getElementById("side").innerHTML=cart
+    cart += pro.price * pro.qty;
+    document.getElementById("side").innerHTML = cart;
   });
 };
 
-
-checkbtn.addEventListener('click', ()=> {
+checkbtn.addEventListener("click", () => {
   alert("pheli fursat me nikal");
-})
+});
 
 const get = async () => {
   let res = await getdata("http://localhost:3000/cart");

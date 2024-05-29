@@ -1,0 +1,34 @@
+{
+  "student": [
+    {
+      "id": "510d",
+      "name": "mitu",
+      "rollno": "9",
+      "html": 10,
+      "css": 20,
+      "js": 10,
+      "react": 10,
+      "node": 10
+    },
+    {
+      "id": "e912",
+      "name": "jash",
+      "rollno": "2",
+      "html": 60,
+      "css": 60,
+      "js": 60,
+      "react": 60,
+      "node": 60
+    },
+    {
+      "id": "f76b",
+      "name": "n",
+      "rollno": "1",
+      "html": 1,
+      "css": 1,
+      "js": 100,
+      "react": 100,
+      "node": 1
+    }
+  ]
+}
