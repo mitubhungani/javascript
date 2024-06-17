@@ -11,13 +11,13 @@ const add = (e) => {
   let hi = {
     question: document.getElementById("que").value,
     options: {
-      A:document.getElementById("A").value,
-      B:document.getElementById("B").value,
-      C:document.getElementById("C").value,
-      D:document.getElementById("D").value,
+      A: document.getElementById("A").value,
+      B: document.getElementById("B").value,
+      C: document.getElementById("C").value,
+      D: document.getElementById("D").value,
     },
 
-    correct:(document.getElementById("op").value),
+    correct: document.getElementById("op").value,
   };
   console.log(hi);
   post(hi);

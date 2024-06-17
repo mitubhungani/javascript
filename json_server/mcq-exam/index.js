@@ -33,7 +33,6 @@ const ui = (data) => {
     op1.setAttribute("id", "A");
     op1.setAttribute("class", "A");
     op1.innerHTML = ele.options.A;
-    
 
     let op2 = document.createElement("button");
     op2.setAttribute("id", "B");

@@ -1,69 +1,72 @@
-#qdiv{
-    width: 100%;
+#qdiv {
+  width: 100%;
 }
 
-#q{
-    width: 100%;
-    font-size: 20px;
+#q {
+  width: 100%;
+  font-size: 20px;
 }
 
-#odiv{
-    width: 35%;
+#odiv {
+  width: 35%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#que{
-    margin: 10px;
-    padding: 10px;
-    width: 400px;
-    border: 2px solid black;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
+#que {
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-#A,#B,#C,#D{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid black;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
+#A,
+#B,
+#C,
+#D {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-#op{
-    width: 70px;
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid black;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
+#op {
+  width: 70px;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.btn-sub{
-    margin: 10px;
-    padding: 10px;
-    background-color: transparent;
-    outline: none;
-    border: 2px solid black;
-    outline: none;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 100px;
+.btn-sub {
+  margin: 10px;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100px;
 }
 
-.o1{
-    margin: 20px 0px;
-    width: 50%;
+.o1 {
+  margin: 20px 0px;
+  width: 50%;
 }
 
-.trues{
-    background-color: green;
+.trues {
+  background-color: green;
 }
-.false{
-    background-color: red;
+.false {
+  background-color: red;
 }

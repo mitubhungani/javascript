@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Scheduler</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Task Scheduler</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="task-form">
+                <input type="text" class="taskinput" id="task" placeholder="Enter task..." required>
+                <textarea class="taskinput" id="description" placeholder="Enter additional notes..."></textarea>
+                <div class="form-row">
+                    <select id="priority">
+                        <option value="top">Top Priority</option>
+                        <option value="middle">Middle Priority</option>
+                        <option value="low">Less Priority</option>
+                    </select>
+                    <input type="date" id="deadline" required>
+                    <input type="time" id="time" required>
+                    <button id="add-task">Add Task</button>
+                </div>
+            </div>
+            <div class="filters">
+                <button class="show-all-btn">Show All Tasks</button>
+                <button class="filter-btn" data-priority="top">Top Priority</button>
+                <button class="filter-btn" data-priority="middle">Middle Priority</button>
+                <button class="filter-btn" data-priority="low">Less Priority</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="task-list" id="task-list">
+
+            </div>
+        </div>
+    </main>
+    <script src="logic.js"></script>
+</body>
+
+</html>
